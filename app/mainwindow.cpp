@@ -12,7 +12,7 @@ MainWindow::MainWindow(const nanogui::Vector2i &size, const std::string &caption
     :
       nanogui::Screen(size, caption, resizable, fullscreen, colorBits, alphaBits, depthBits, stencilBits, nSamples, glMajor, glMinor)
 {
-    setBackground(Color(255, 255, 0, 255));
+    setBackground(Color(127, 127, 127, 0.5));
     setResizeCallback([&](nanogui::Vector2i)
     {
         performLayout();
@@ -42,6 +42,6 @@ bool MainWindow::keyboardEvent(int key, int scancode, int action, int modifiers)
 
 void MainWindow::draw(NVGcontext* ctx)
 {        
-    Screen::draw(ctx);
+    //Screen::draw(ctx);
 }
 }//namespace fm
