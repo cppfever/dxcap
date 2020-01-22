@@ -1,0 +1,6 @@
+[submodule "3dparty/nanogui"]
+	path = 3dparty/nanogui
+	url = https://github.com/wjakob/nanogui.git
+[submodule "3dparty/LibQtScreen"]
+	path = 3dparty/LibQtScreen
+	url = https://github.com/bakwc/LibQtScreen.git
