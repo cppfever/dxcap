@@ -5,7 +5,7 @@ int main(int /* argc */, char ** /* argv */)
 {
     try
     {
-            auto mainwindow = dxcap::MainWindow(Eigen::Vector2i(800, 600), "DXCap");
+            auto mainwindow = dxcap::MainWindow(Eigen::Vector2i(800, 600), "I'm DXCap");
             ::glfwSetWindowPos(mainwindow.glfwWindow(), 300, 300);
             mainwindow.setVisible(true);
             mainwindow.performLayout();

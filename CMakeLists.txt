@@ -25,11 +25,11 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${DXCAP_BINARY_DIR})
 set(NANOGUI_BUILD_EXAMPLE OFF CACHE BOOL " " FORCE)
 set(NANOGUI_BUILD_PYTHON  OFF CACHE BOOL " " FORCE)
 set(NANOGUI_INSTALL       OFF CACHE BOOL " " FORCE)
-set(NANOGUI_USE_GLAD_DEFAULT ON CACHE BOOL " " FORCE)
+set(NANOGUI_USE_GLAD ON CACHE BOOL " " FORCE)
 add_subdirectory(3dparty/nanogui)
 add_definitions(${NANOGUI_EXTRA_DEFS})
 include_directories(3dparty/nanogui/include ${NANOGUI_EXTRA_INCS})
-message("NanoGUI dependencies ${NANOGUI_EXTRA_INCS}")
+message(STATUS "My NanoGUI dependencies ${NANOGUI_EXTRA_INCS}")
 include_directories(ext/nanogui/include)
 ############ NanoGUI ################
 
@@ -42,6 +42,6 @@ include_directories(ext/nanogui/include)
 
 # Application
 include_directories(app)
-add_executable(dxcap app/main.cpp app/mainwindow.cpp)
+add_executable(dxcap app/main.cpp)
 message("NanoGUI dependencies ${NANOGUI_EXTRA_LIBS}")
 target_link_libraries(dxcap nanogui ${NANOGUI_EXTRA_LIBS})
